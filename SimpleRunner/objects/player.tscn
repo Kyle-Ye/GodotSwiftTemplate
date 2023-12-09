@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://d21r2vhukevl7"]
+
+[ext_resource type="Texture2D" uid="uid://hvn3h3m6ougc" path="res://assets/swift.png" id="1_cndjr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyl3d"]
+atlas = ExtResource("1_cndjr")
+region = Rect2(864, 192, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y78dh"]
+atlas = ExtResource("1_cndjr")
+region = Rect2(912, 192, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkcor"]
+atlas = ExtResource("1_cndjr")
+region = Rect2(960, 192, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v8ln"]
+atlas = ExtResource("1_cndjr")
+region = Rect2(1008, 192, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67r7n"]
+atlas = ExtResource("1_cndjr")
+region = Rect2(1056, 192, 48, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3k8p"]
+atlas = ExtResource("1_cndjr")
+region = Rect2(1104, 192, 48, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0btm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyl3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y78dh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkcor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v8ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67r7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3k8p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxeaw"]
+radius = 19.0
+height = 54.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_h0btm")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 16)
+shape = SubResource("CapsuleShape2D_oxeaw")
