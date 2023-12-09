@@ -56,7 +56,7 @@ animations = [{
 radius = 19.0
 height = 54.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="PlayerController"]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -3,9 +3,9 @@ entry_symbol = "swift_entry_point"
 compatibility_minimum = 4.2
 
 [libraries]
-macos.debug = "res://bin/GodotKit-debug.dylib"
-macos.release = "res://bin/GodotKit-release.dylib"
+macos.debug = "res://bin/debug/libGodotKit.dylib"
+macos.release = "res://bin/release/libGodotKit.dylib"
 
 [dependencies]
-macos.debug = {"res://bin/libSwiftGodot-debug.dylib" : ""}
-macos.release = {"res://bin/libSwiftGodot-release.dylib" : ""}
+macos.debug = {"res://bin/debug/libSwiftGodot.dylib" : ""}
+macos.release = {"res://bin/release/libSwiftGodot.dylib" : ""}
